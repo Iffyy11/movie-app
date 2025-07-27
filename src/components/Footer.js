@@ -1,21 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// import logo and background if needed
-// import bg from '../assets/footer-bg.jpg';
-// import logo from '../assets/tmovie.png';
+
 
 const Footer = () => {
     return (
         <div
             className="footer"
-            // Uncomment the line below if you have a bg image
-            // style={{ backgroundImage: `url(${bg})` }}
-        >
+            
             <div className="footer__content container">
                 <div className="footer_content_logo">
                     <div className="logo">
-                        {/* Uncomment and import logo if you want to use it */}
-                        {/* <img src={logo} alt="Logo" /> */}
+                      
                         <Link to="/">tMovies</Link>
                     </div>
                 </div>
