@@ -27,6 +27,82 @@
 .App-link {
   color: #61dafb;
 }
+/* === Reset + Base === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #141414;
+  color: #ffffff;
+  font-family: 'Segoe UI', sans-serif;
+  padding: 2rem;
+}
+
+/* === Heading === */
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #e50914;
+}
+
+/* === Movie Grid === */
+.movie-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1.5rem;
+}
+
+/* === Movie Card === */
+.movie-card {
+  background-color: #1f1f1f;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+}
+
+/* === Movie Poster === */
+.movie-poster {
+  width: 100%;
+  height: 270px;
+  object-fit: cover;
+  display: block;
+}
+
+/* === Info Section === */
+.movie-info {
+  padding: 0.75rem 1rem;
+}
+
+.movie-title {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+  color: #ffffff;
+}
+
+.movie-meta {
+  font-size: 0.85rem;
+  color: #aaa;
+}
+
+.movie-genre {
+  display: inline-block;
+  margin-top: 0.5rem;
+  background-color: #e50914;
+  color: #fff;
+  padding: 0.3rem 0.6rem;
+  border-radius: 14px;
+  font-size: 0.7rem;
+}
 
 @keyframes App-logo-spin {
   from {
