@@ -1,25 +1,25 @@
-import 'swiper/swiper.min.css';
-import './assets/boxicons-2.0.7/css/boxicons.min.css';
-import './App.scss';
+// src/App.js
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-import { BrowserRouter, Route } from 'react-router-dom';
+import 'swiper/css';
 
-import Header from './components/header/Header';
-import Footer from './components/footer/Footer';
+import Header from './components/Header';
+import Footer from './components/Footer';
 
-import Routes from './config/Routes';
+import Home from './pages/Home';
+import MovieDetail from './pages/MovieDetail';
 
 function App() {
     return (
-        <BrowserRouter>
-            <Route render={props => (
-                <>
-                    <Header {...props}/>
-                    <Routes/>
-                    <Footer/>
-                </>
-            )}/>
-        </BrowserRouter>
+        <Router>
+            <Header />
+            <Switch>
+                <Route exact path="/" component={Home} />
+                <Route path="/movie/:id" component={MovieDetail} />
+            </Switch>
+            <Footer />
+        </Router>
     );
 }
 
